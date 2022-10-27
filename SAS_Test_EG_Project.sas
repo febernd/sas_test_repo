@@ -10,10 +10,9 @@
 proc sql;
 	create table tmp as 
 		select count(*) AS CNT
-		from KDM.T_PARTNER
+		from KDM.T_PARTNER as t1
 	;
-quit;
-
+quit; 
 %LET _CLIENTTASKLABEL=;
 %LET _CLIENTPROCESSFLOWNAME=;
 %LET _CLIENTPROJECTPATH=;
